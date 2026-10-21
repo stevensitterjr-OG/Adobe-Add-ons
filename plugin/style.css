@@ -1,0 +1,18 @@
+body { padding: 16px; color: #ededed; background: #292929; font-size: 13px; }
+h2 { font-size: 23px; margin: 0 0 6px; }
+p { line-height: 1.5; margin: 8px 0; }
+.subtitle, .hint { color: #b8b8b8; }
+section { background: #333; padding: 12px; margin: 18px 0; border-radius: 6px; }
+.row { display: flex; align-items: center; justify-content: space-between; }
+label { display: block; margin: 12px 0 5px; }
+input[type=number], select { width: 100%; padding: 7px; color: #eee; background: #383838; border: 1px solid #666; border-radius: 4px; }
+button { padding: 7px 12px; background: #454545; color: #fff; border: 1px solid #777; border-radius: 4px; cursor: pointer; }
+button:disabled { opacity: 0.5; }
+.presets { display: flex; margin-top: 8px; }
+.presets button { margin-right: 8px; }
+.check { display: flex; align-items: center; }
+.check input { margin-right: 8px; }
+.preview { color: #a9d6ff; margin: 16px 0; }
+.primary { width: 100%; background: #176ad5; border-color: #438cee; font-weight: bold; padding: 11px; }
+.hint { font-size: 11px; margin-top: 16px; }
+.error { color: #ffb1a9; }
