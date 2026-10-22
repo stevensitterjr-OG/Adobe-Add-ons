@@ -1,4 +1,5 @@
-body { padding: 16px; color: #ededed; background: #292929; font-size: 13px; }
+html { height: 100%; overflow: hidden; }
+body { height: 100%; margin: 0; display: flex; flex-direction: column; overflow: hidden; color: #ededed; background: #292929; font-size: 13px; }
 h2 { font-size: 23px; margin: 0 0 6px; }
 p { line-height: 1.5; margin: 8px 0; }
 .subtitle, .hint { color: #b8b8b8; }
@@ -16,3 +17,12 @@ button:disabled { opacity: 0.5; }
 .primary { width: 100%; background: #176ad5; border-color: #438cee; font-weight: bold; padding: 11px; }
 .hint { font-size: 11px; margin-top: 16px; }
 .error { color: #ffb1a9; }
+
+.settings { flex: 1; min-height: 0; overflow-y: scroll; padding: 12px; }
+.settings > * { flex-shrink: 0; }
+footer { flex-shrink: 0; padding: 10px 12px; border-top: 1px solid #555; background: #292929; }
+input[type=number], select { height: 30px; min-height: 30px; flex-shrink: 0; }
+#document { overflow-wrap: break-word; }
+#refresh { flex-shrink: 0; margin-left: 8px; }
+footer .preview { margin: 0 0 8px; }
+#status { font-size: 12px; margin: 8px 0 0; }

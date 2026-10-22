@@ -33,11 +33,14 @@ async function upscale() {
   if (busy) return;
   busy = true;
   $('upscale').disabled = true;
-  status('Upscaling locally… Photoshop may take a moment.');
+  $('upscale').textContent = 'Upscaling…';
+  status('Working locally… Please wait for the Done message.');
   const settings = options();
   const duplicate = $('duplicate').checked;
   let copyCreated = false;
   try {
+    // Let the panel paint its working state before Photoshop begins processing.
+    await new Promise(resolve => setTimeout(resolve, 50));
     const sourceId = currentDocument().id;
     await core.executeAsModal(async executionContext => {
       const source = currentDocument();
@@ -65,6 +68,7 @@ async function upscale() {
     status(`${error.message || error}${copyCreated ? ' The duplicate remains open; the original is preserved.' : ''} If Preserve Details 2.0 is unavailable, try Bicubic Smoother.`, true);
   } finally {
     busy = false;
+    $('upscale').textContent = 'Upscale image';
     refresh();
   }
 }

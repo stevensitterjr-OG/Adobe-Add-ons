@@ -2,6 +2,7 @@
 <html>
 <head><meta charset="UTF-8"><link rel="stylesheet" href="style.css"></head>
 <body>
+ <div class="settings">
   <h2>Local Upscale</h2>
   <p class="subtitle">Bigger images. Processed in Photoshop.</p>
   <section><div class="row"><strong>Active document</strong><button id="refresh">Refresh</button></div>
@@ -14,10 +15,13 @@
   <select id="method"><option value="details">Preserve Details 2.0</option><option value="smooth">Bicubic Smoother</option><option value="nearest">Nearest Neighbor · pixel art</option></select>
   <label for="noise">Reduce noise (%)</label><input id="noise" type="number" min="0" max="100" value="10" step="1">
   <label class="check"><input id="duplicate" type="checkbox" checked> Create a duplicate document</label>
+  <p class="hint">For GPU acceleration, enable Use Graphics Processor in Edit → Preferences → Performance. Photoshop manages hardware use. Large images may take time.</p>
+ </div>
+ <footer>
   <p id="preview" class="preview"></p>
   <button id="upscale" class="primary">Upscale image</button>
   <p id="status" role="status">Ready. No uploads or external services.</p>
-  <p class="hint">For GPU acceleration, enable Use Graphics Processor in Edit → Preferences → Performance. Photoshop manages hardware use. Large images may take time.</p>
+ </footer>
   <script src="panel.js"></script>
 </body>
 </html>

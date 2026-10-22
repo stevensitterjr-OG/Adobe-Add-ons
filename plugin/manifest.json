@@ -2,15 +2,33 @@
   "manifestVersion": 5,
   "id": "com.stevensitterjr.localupscale",
   "name": "Local Upscale",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.html",
-  "host": [{ "app": "PS", "minVersion": "24.0.0" }],
-  "entrypoints": [{
-    "type": "panel",
-    "id": "localUpscale",
-    "label": { "default": "Local Upscale" },
-    "minimumSize": { "width": 280, "height": 480 },
-    "preferredDockedSize": { "width": 320, "height": 620 },
-    "preferredFloatingSize": { "width": 340, "height": 660 }
-  }]
+  "host": [
+    {
+      "app": "PS",
+      "minVersion": "24.0.0"
+    }
+  ],
+  "entrypoints": [
+    {
+      "type": "panel",
+      "id": "localUpscale",
+      "label": {
+        "default": "Local Upscale"
+      },
+      "minimumSize": {
+        "width": 280,
+        "height": 480
+      },
+      "preferredDockedSize": {
+        "width": 320,
+        "height": 620
+      },
+      "preferredFloatingSize": {
+        "width": 340,
+        "height": 660
+      }
+    }
+  ]
 }

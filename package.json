@@ -1,8 +1,13 @@
 {
   "name": "photoshop-local-upscale",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Local image upscaling panel for Adobe Photoshop",
-  "scripts": { "test": "node --test", "package": "python3 scripts/package.py" },
-  "engines": { "node": ">=18" }
+  "scripts": {
+    "test": "node --test",
+    "package": "python3 scripts/package.py"
+  },
+  "engines": {
+    "node": ">=18"
+  }
 }

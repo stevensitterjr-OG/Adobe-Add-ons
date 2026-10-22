@@ -72,3 +72,9 @@ Automated checks cover size planning, aspect ratios, invalid/oversized inputs, m
 ## Privacy
 
 The plugin declares no network or filesystem permissions. Processing stays in Photoshop. Nothing is saved automatically, and no telemetry is collected by the plugin.
+
+## Updating from version 1.0.0
+
+Version 1.0.1 fixes clipped controls in short floating panels: settings scroll independently, while the Upscale button, output dimensions, and status stay at the bottom. The button changes to “Upscaling…” during processing. No percentage estimate is shown because Photoshop's native resize does not provide one through this command.
+
+Download and extract the latest source, then unload the old plugin in UXP Developer Tool. If you extracted to a new folder, remove the old tool entry and add the new `plugin/manifest.json`; otherwise use Reload. Open Local Upscale in Photoshop. Enlarge the floating panel by dragging its lower edge if necessary. Choose 2× and click Upscale image. For a 1152 × 626 source, success should report 2304 × 1252 pixels and open a duplicate when that option is checked. Verify dimensions using Image → Image Size; the canvas zoom percentage alone does not indicate output resolution.
